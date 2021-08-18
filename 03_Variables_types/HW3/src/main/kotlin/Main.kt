@@ -3,17 +3,22 @@ fun main() {
     val firstName: String = "Vladislav"
     val lastName: String = "Ozdrovskiy"
 
-    var hight: Double = 181.0
+    var height: Double = 181.0
     var weight: Float = 75.5f
-    var isChild: Boolean = hight>150 && weight>40
+    var isChild: Boolean = height<150 || weight<40
 
-    val info = """
+    var info: String= """
         |$firstName $lastName
-        |hight: $hight
+        |hight: $height
         |weight: $weight
         |$isChild
     """.trimMargin()
     println(info)
+    height = 182.0
+    weight = 40f
+    println(info)
+
+
 
 
 
