@@ -16,6 +16,12 @@ fun main() {
     println(info)
     height = 182.0
     weight = 40f
+    info= """
+        |$firstName $lastName
+        |hight: $height
+        |weight: $weight
+        |$isChild
+    """.trimMargin()
     println(info)
 
 
