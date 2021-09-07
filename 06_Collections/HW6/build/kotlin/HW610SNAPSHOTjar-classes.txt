@@ -1,0 +1,1 @@
+C:\skillbox\kotlin\06_Collections\HW6\build\classes\kotlin\main\MainKt.class
