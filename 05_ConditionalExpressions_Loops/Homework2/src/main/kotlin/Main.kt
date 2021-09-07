@@ -1,8 +1,8 @@
 fun main() {
-    FibonachiNumber()
+    fibonachiNumber()
 }
 
-fun FibonachiNumber() {
+fun fibonachiNumber() {
     println("Введите номер числа из последовательности Фибоначи")
     var n = readLine()?.toIntOrNull() ?: return
     var count1 = 1

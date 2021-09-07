@@ -2,7 +2,7 @@ fun main() {
     var string: String = "F2p)v\"y233{0->c}ttelciFc"
     println(transcript1Part(string.substring(0, string.length/2)) +
             transcript2Part(string.substring(string.length/2, string.length)))
-    
+
 }
 
 
@@ -16,7 +16,7 @@ fun transcript1Part(sourceString: String): String {
     shiftedString=  shiftedString.replace('4','u')
     println("2.3 "+shiftedString+ " Замена цифры 4 на символ u.")
 
-    shiftedString = sourceString.map {char -> char - 3}.joinToString("")
+    shiftedString = shiftedString.map {char -> char - 3}.joinToString("")
     println("2.2 "+shiftedString+" Сдвиг каждого символа влево на 3")
 
     shiftedString=  shiftedString.replace('0','o')
