@@ -12,12 +12,12 @@ fun phonebook() {
 
     } while (n <= 0)
 
+    val nums = listOfTelephoneNumbers(n)
 
-    listOfTelephoneNumbers(n)
-    numbersFilter(n)
-    amountOFUnicNumbers(n)
-    sumOfNumbers(n)
-    mutableMap(n)
+    numbersFilter(nums)
+    amountOFUnicNumbers(nums)
+    sumOfNumbers(nums)
+    mutableMap(nums)
 
 }
 
@@ -31,32 +31,26 @@ fun listOfTelephoneNumbers(n: Int): MutableList<String> {
     return (numbers)
 }
 
-fun numbersFilter(n: Int) {
-    val numbers = listOfTelephoneNumbers(n)
-    val numbersFilter = numbers.filter { it.startsWith("+7") }
+fun numbersFilter(nums: List<String>) {
+    val numbersFilter = nums.filter { it.startsWith("+7") }
     println("Номера начинающиеся с +7: " + numbersFilter)
 }
 
-fun amountOFUnicNumbers(n: Int) {
-    val numbers = listOfTelephoneNumbers(n)
-    val amountOFUnicNumbers = numbers.toSet().toList().size
+fun amountOFUnicNumbers(nums: List<String>) {
+    val amountOFUnicNumbers = nums.toSet().toList().size
     println("Количество уникальных номеров: " + amountOFUnicNumbers)
 
 }
 
-fun sumOfNumbers(n: Int) {
-    val numbers = listOfTelephoneNumbers(n)
-    println("Cуммa длин всех номеров телефонов: " + numbers.sumOf { it.length })
+fun sumOfNumbers(nums: List<String>) {
+    println("Cуммa длин всех номеров телефонов: " + nums.sumOf { it.length })
 }
 
-fun mutableMap(n: Int) {
-    val numbers = listOfTelephoneNumbers(n)
+fun mutableMap(nums: List<String>) {
     val namesToTelephones = mutableMapOf<String, String>()
 
-    for (i in 0 until numbers.toSet().toList().size) {
-        println("Введите имя человека с номером телефона ${numbers[i]}:")
-    }
-    for (number in numbers.toSet()) {
+    for (number in nums.toSet()) {
+        print("Введите имя человека с номером телефона ${number}: ")
         namesToTelephones[number] = readLine() ?: ""
     }
 
